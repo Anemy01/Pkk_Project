@@ -1,0 +1,238 @@
+/* [01] - Reset & Base Neural Link Style */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', 'Segoe UI', sans-serif; /* Font Tech */
+}
+
+body {
+    background-color: #05060a;
+    color: #ffffff;
+    min-height: 100vh;
+    width: 100vw;
+    /* PENTING: Membuat konten selalu di tengah layar (Horizontal & Vertikal) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    background: radial-gradient(circle, #0a0b16 0%, #05060a 100%);
+}
+
+/* [02] - Kontainer Utama (Responsif) */
+section {
+    display: none;
+    width: 100%;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.6s ease-out;
+}
+
+section.active-section {
+    display: flex;
+}
+
+/* Kotak Konten yang akan nampil di Infokus */
+.login-box, .materi-centered-box, .centered-wrapper {
+    width: 90%; 
+    max-width: 1000px; /* Batas lebar di laptop agar simetris */
+    background: rgba(15, 17, 26, 0.95);
+    border: 2px solid #00f2ff;
+    border-radius: 15px;
+    padding: 40px 25px;
+    box-shadow: 0 0 40px rgba(0, 242, 255, 0.2);
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+/* [03] - Efek Glitch & Teks */
+.glitch {
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    color: #00f2ff;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px #ff0055;
+}
+
+/* [04] - Team Grid (Otomatis Berubah) */
+.team-grid {
+    display: grid;
+    /* Di HP jadi 2-3 kolom, di Laptop otomatis sebaris/6 kolom */
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 15px;
+    margin: 30px 0;
+    width: 100%;
+}
+
+.member-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid #333;
+    padding: 15px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.member-card img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid #00f2ff;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+/* [05] - Area Materi (Scrollable agar tidak tumpah) */
+.text-main {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    line-height: 1.6;
+    text-align: justify;
+    color: #d1d1d1;
+    max-height: 40vh; /* Batasi tinggi teks materi */
+    overflow-y: auto; /* Munculkan scroll internal */
+    padding-right: 15px;
+    margin: 20px 0;
+}
+
+/* Custom Scrollbar */
+.text-main::-webkit-scrollbar { width: 5px; }
+.text-main::-webkit-scrollbar-thumb { background: #00f2ff; border-radius: 10px; }
+
+/* [06] - AI Zone */
+.ai-zone {
+    opacity: 0;
+    transition: 0.5s;
+    background: rgba(0, 242, 255, 0.05);
+    border-left: 4px solid #ffcc00;
+    padding: 15px;
+    text-align: left;
+    margin-top: 15px;
+}
+
+/* [07] - Navigasi & Tombol */
+.materi-controls, .input-group {
+    display: flex;
+    flex-wrap: wrap; /* Supaya tombol gak tumpah di HP */
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+button {
+    padding: 12px 25px;
+    background: transparent;
+    border: 1px solid #00f2ff;
+    color: #00f2ff;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #00f2ff;
+    color: #000;
+    box-shadow: 0 0 15px #00f2ff;
+}
+
+.btn-boot {
+    background: #00f2ff;
+    color: #000;
+    clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+}
+
+.btn-danger {
+    border-color: #ff0055;
+    color: #ff0055;
+    animation: pulse 1.5s infinite;
+}
+
+/* [08] - Animasi & Media Queries */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(255, 0, 85, 0.4); }
+    70% { box-shadow: 0 0 0 15px rgba(255, 0, 85, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 0, 85, 0); }
+}
+
+/* Loading Bar */
+.loading-bar {
+    width: 100%;
+    height: 4px;
+    background: #1a1c2c;
+    margin: 20px 0;
+}
+.loading-bar span {
+    display: block;
+    height: 100%;
+    width: 0%;
+    background: #00f2ff;
+    transition: width 2s linear;
+}
+
+/* Penyesuaian khusus untuk layar sangat kecil */
+@media (max-width: 480px) {
+    .login-box, .materi-centered-box { padding: 20px 15px; }
+    .team-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+.btn-danger {
+    background: #ff0055;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(255, 0, 85, 0.4);
+    transition: 0.3s;
+}
+
+.btn-danger:hover {
+    background: #ff4d88;
+    box-shadow: 0 0 20px #ff0055;
+    transform: scale(1.05);
+}
+
+.btn-back {
+    background: #333;
+    color: #00f2ff;
+    border: 1px solid #00f2ff;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Perbaikan Kontainer Leaderboard agar Lebar dan Bisa Scroll */
+.leaderboard-table-container {
+    width: 100%;
+    overflow-x: auto; /* Scroll horizontal jika layar sangat kecil */
+    max-height: 400px; /* Batasi tinggi agar tidak tumpah */
+    overflow-y: auto; /* Scroll vertikal jika banyak kelompok */
+    margin: 20px 0;
+    padding: 0 10px;
+}
+
+/* Memastikan tabel mengambil seluruh lebar kotak */
+.leaderboard-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px; /* Memberi jarak antar baris agar tidak dempet */
+    text-align: center;
+}
+
+.leaderboard-table th, .leaderboard-table td {
+    padding: 15px 10px; /* Memberi ruang di dalam sel */
+    white-space: nowrap; /* Mencegah teks turun ke bawah/patah baris */
+}
+
+/* Membuat Kotak Wrapper Lebih Lebar */
+.centered-wrapper {
+    width: 95%; /* Mengambil 95% lebar layar agar lega di samping */
+    max-width: 1100px; /* Tapi tetap ada batas maksimal di laptop */
+}

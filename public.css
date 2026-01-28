@@ -1,0 +1,209 @@
+/* [01] Global Reset & Font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+}
+
+body {
+    background: radial-gradient(circle, #0a1128 0%, #000000 100%);
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* [02] Container Box (Simetris di Tengah) */
+.public-box {
+    background: rgba(10, 15, 30, 0.9);
+    border: 2px solid #00f2ff;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 0 30px rgba(0, 242, 255, 0.3);
+    width: 90vw;
+    max-width: 850px;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* [03] Typography & Glow */
+.glitch {
+    font-size: 2.5rem;
+    color: #00f2ff;
+    text-shadow: 0 0 10px #00f2ff;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+p {
+    color: #ccd6f6;
+    margin-bottom: 20px;
+}
+
+/* [04] Input Section (Layar Nama) */
+#group-name-input {
+    width: 100%;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid #00f2ff;
+    color: #fff;
+    font-size: 1.2rem;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+/* [05] Timer & Progress Bar */
+#timer-bar {
+    width: 100%;
+    height: 12px;
+    background: #1a1c2c;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 242, 255, 0.3);
+}
+
+#timer-fill {
+    display: block;
+    height: 100%;
+    background: linear-gradient(90deg, #00f2ff, #0077ff);
+    width: 100%;
+    transition: width 1s linear;
+}
+
+.quiz-stats {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    color: #00f2ff;
+    margin-bottom: 20px;
+}
+
+/* [06] Question & Options Grid */
+#question-text {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    line-height: 1.4;
+    min-height: 80px;
+}
+
+.options-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.option-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid #00f2ff;
+    color: white;
+    padding: 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.option-btn:hover {
+    background: rgba(0, 242, 255, 0.2);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 242, 255, 0.4);
+}
+
+/* [07] Buttons (Main & Secondary) */
+.btn-main, .btn-secondary {
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 10px;
+    text-transform: uppercase;
+    transition: 0.3s;
+    margin: 10px;
+}
+
+.btn-main {
+    background: #00f2ff;
+    color: #000;
+    border: none;
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 2px solid #00f2ff;
+    color: #00f2ff;
+}
+
+.btn-main:hover {
+    background: #fff;
+    box-shadow: 0 0 20px #00f2ff;
+}
+
+/* [08] Score Display */
+.score-display {
+    font-size: 5rem;
+    font-weight: bold;
+    color: #ffcc00;
+    text-shadow: 0 0 20px #ffcc00;
+}
+
+/* [09] Animasi Loading */
+.loader-ring {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #1a1c2c;
+    border-top: 5px solid #00f2ff;
+    border-radius: 50%;
+    margin: 20px auto;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin { 100% { transform: rotate(360deg); } }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+/* [10] Responsive Mobile */
+@media (max-width: 600px) {
+    .options-grid { grid-template-columns: 1fr; }
+    .glitch { font-size: 1.5rem; }
+    #question-text { font-size: 1.1rem; }
+}
+
+/* Efek Glitch untuk container soal */
+.glitch-correct {
+    border: 4px solid #00ff88 !important; /* Hijau untuk benar */
+    box-shadow: 0 0 20px #00ff88;
+    transition: 0.2s;
+}
+
+.glitch-wrong {
+    border: 4px solid #ff0055 !important; /* Merah untuk salah */
+    box-shadow: 0 0 20px #ff0055;
+    transition: 0.2s;
+}
+
+/* Animasi getar sedikit biar makin keren */
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    20% { transform: translate(-1px, -2px) rotate(-1deg); }
+    40% { transform: translate(-3px, 0px) rotate(1deg); }
+    60% { transform: translate(3px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -1px) rotate(0deg); }
+}
+
+.shake-effect {
+    animation: shake 0.3s;
+}
+
+/* Efek kilat di layar saat menjawab */
+body {
+    transition: box-shadow 0.3s ease;
+}
+
+/* Animasi tombol saat benar */
+.option-btn {
+    transition: all 0.2s ease;
+}

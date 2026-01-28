@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Proyek PKK</title>
+    <link rel="stylesheet" href="admin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <section id="login-screen" class="active-section">
+        <div class="login-box">
+            <h1 class="glitch" data-text="NEURAL LINK">BARUDAK GG</h1>
+            <p class="system-status" id="boot-text">INITIALIZING SYSTEM SCAN...</p>
+            
+            <div class="loading-bar"><span id="boot-bar"></span></div>
+            
+            <div id="access-area" style="display:none;">
+                <button onclick="bootSystem()" class="btn-boot">LOGIN</button>
+                <p class="blink-text">SISTEM SIAP: KLIK UNTUK MASUK</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="team-screen" style="display:none;">
+        <div class="centered-wrapper">
+            <h2 class="cyber-title">PROYEK PKK KELOMPOK 3 - TEAM BEM</h2>
+            <div class="team-grid">
+                <div class="member-card">
+                    <img src="DIKI.png" alt="Diki">
+                    <div class="member-info"><h3>DIKI</h3></div>
+                </div>
+                <div class="member-card">
+                    <img src="JAFA.png" alt="Jafa">
+                    <div class="member-info"><h3>JAFA</h3></div>
+                </div>
+                <div class="member-card">
+                    <img src="RAFAEL.png" alt="Rafael">
+                    <div class="member-info"><h3>RAFAEL</h3></div>
+                </div>
+                <div class="member-card">
+                    <img src="SIDQI.png" alt="Sidqi">
+                    <div class="member-info"><h3>SIDQI</h3></div>
+                </div>
+                <div class="member-card">
+                    <img src="TRIYANTO.png" alt="Triyanto">
+                    <div class="member-info"><h3>TRIYANTO</h3></div>
+                </div>
+                <div class="member-card">
+                    <img src="DETA.png" alt="Deta">
+                    <div class="member-info"><h3></h3></div>
+                </div>
+            </div>
+            <button onclick="goToMateri()" class="btn-primary">MULAI MATERI</button>
+        </div>
+    </section>
+
+    <section id="materi-screen" style="display:none;">
+        <div class="materi-centered-box">
+            <h1 id="bab-title" class="glitch">JUDUL MATERI</h1>
+            
+            <div class="content-wrapper">
+                <div id="bab-content" class="text-main">
+                    Memuat materi...
+                </div>
+                
+                <div id="ai-area" class="ai-zone">
+                    <div class="ai-header">🧠 Moka AI Pemateri Kami</div>
+                    <div id="ai-typing"></div>
+                </div>
+            </div>
+
+            <div class="materi-controls">
+                <button onclick="prevMateri()">BACK</button>
+                <button id="btn-tanya-ai" onclick="jelaskanAi()" class="btn-ai">TANYA Moka</button>
+                <button id="btn-next" onclick="nextMateri()">NEXT</button>
+                
+                <button id="btn-go-quiz" style="display:none;" onclick="pindahKeKuis()" class="btn-danger">GASKEUN KUIS!</button>
+            </div>
+        </div>
+    </section>
+
+<section id="leaderboard-screen" style="display:none;">
+    <div class="centered-wrapper">
+        <h1 class="glitch">FINAL LEADERBOARD</h1>
+        
+        <div class="leaderboard-table-container">
+            <table class="leaderboard-table">
+                <thead>
+                    <tr>
+                        <th>RANK</th>
+                        <th>KELOMPOK</th>
+                        <th>SCORE</th>
+                        <th>TIME</th>
+                    </tr>
+                </thead>
+                <tbody id="leaderboard-body">
+                    </tbody>
+            </table>
+        </div>
+        
+        <div class="admin-actions" style="margin-top: 30px; display: flex; gap: 15px; justify-content: center;">
+            <button onclick="resetLeaderboard()" class="btn-danger">RESET ALL SCORES</button>
+            <button onclick="window.location.reload()" class="btn-nav">RESTART SYSTEM</button>
+        </div>
+    </div>
+</section>
+
+
+    <audio id="bgm" src="bgm_admin.mp3" loop></audio>
+
+    <script src="admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Public Quiz System - PKK</title>
+    <link rel="stylesheet" href="public.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <section id="wait-screen" class="active-section">
+        <div class="public-box">
+            <h1 class="glitch">INITIALIZING SYSTEM</h1>
+            <div class="loader-ring"></div>
+            <p>Menyiapkan data materi AI...</p>
+        </div>
+    </section>
+
+    <section id="name-screen" style="display:none;">
+        <div class="public-box">
+            <h1 class="glitch">IDENTIFICATION</h1>
+            <p>Silakan Masukkan Nama Kelompok:</p>
+            <div class="input-container">
+                <input type="text" id="group-name-input" placeholder="Nama Kelompok..." autocomplete="off">
+            </div>
+            <button onclick="startQuizWithGroup()" class="btn-main">ESTABLISH LINK</button>
+        </div>
+    </section>
+
+    <section id="quiz-screen" style="display:none;">
+        <div class="public-box quiz-container">
+            <div class="quiz-header">
+                <div id="timer-bar"><span id="timer-fill"></span></div>
+                <div class="quiz-stats">
+                    <span id="q-count">SOAL 1/10</span>
+                    <span id="q-timer">30s</span>
+                </div>
+            </div>
+
+            <h2 id="question-text">Memuat pertanyaan dari AI...</h2>
+
+            <div id="options-container" class="options-grid">
+                </div>
+        </div>
+    </section>
+
+    <section id="score-screen" style="display:none;">
+        <div class="public-box">
+            <h1 class="glitch">MISSION COMPLETE</h1>
+            <div class="score-display">
+                <span id="final-score">0</span>
+                <p>POINTS</p>
+            </div>
+            <p id="rank-message">Menganalisis performa kelompok...</p>
+            
+            <hr class="separator">
+
+            <div class="action-buttons">
+                <button onclick="nextGroup()" class="btn-secondary">KELOMPOK BERIKUTNYA</button>
+                
+                <button onclick="closeSessiAndShowLeaderboard()" class="btn-main">SELESAI SEMUA & LIHAT PERINGKAT</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="public.js"></script>
+</body>
+</html>

@@ -1,0 +1,254 @@
+{
+  "bank_soal": [
+    {
+      "bab": "Konsep Kreativitas",
+      "pertanyaan": "Apa perbedaan utama antara kreativitas dan inovasi?",
+      "pilihan": ["Kreativitas adalah tindakan, inovasi adalah ide", "[Kreativitas adalah proses ide, inovasi adalah tindakan nyata]", "Keduanya sama saja", "Kreativitas hanya untuk seniman"]
+    },
+    {
+      "bab": "Konsep Kreativitas",
+      "pertanyaan": "Istilah 'Bring something new into existence' merujuk pada...",
+      "pilihan": ["[Kreativitas]", "Produksi massal", "Konsumsi", "Distribusi"]
+    },
+    {
+      "bab": "Konsep Kreativitas",
+      "pertanyaan": "Mana yang termasuk penghambat kreativitas dari dalam diri (internal)?",
+      "pilihan": ["Kurang modal", "[Takut salah dan takut dihakimi]", "Aturan pemerintah", "Persaingan pasar"]
+    },
+    {
+      "bab": "Ideasi Bisnis",
+      "pertanyaan": "Metode berpikir yang mencari sebanyak mungkin solusi disebut...",
+      "pilihan": ["Convergent Thinking", "[Divergent Thinking]", "Linear Thinking", "Logic Thinking"]
+    },
+    {
+      "bab": "Ideasi Bisnis",
+      "pertanyaan": "Berpikir dari sudut pandang yang tidak biasa atau 'Out of the box' disebut...",
+      "pilihan": ["Vertical Thinking", "Straight Thinking", "[Lateral Thinking]", "Simple Thinking"]
+    },
+    {
+      "bab": "Ideasi Bisnis",
+      "pertanyaan": "Dalam teknik SCAMPER, huruf 'S' (Substitute) berarti...",
+      "pilihan": ["[Mengganti komponen atau bahan]", "Menggabungkan ide", "Menghapus bagian", "Memutar balik"]
+    },
+    {
+      "bab": "Ideasi Bisnis",
+      "pertanyaan": "Teknik SCAMPER huruf 'E' (Eliminate) artinya adalah...",
+      "pilihan": ["Menambah fitur", "[Menghilangkan atau menyederhanakan bagian]", "Memperbesar ukuran", "Mengganti warna"]
+    },
+    {
+      "bab": "Design Thinking",
+      "pertanyaan": "Tahapan Design Thinking yang diawali dengan memahami perasaan pengguna disebut...",
+      "pilihan": ["Define", "Ideate", "Prototype", "[Empathize]"]
+    },
+    {
+      "bab": "Design Thinking",
+      "pertanyaan": "Membuat model sederhana atau simulasi produk dalam Design Thinking disebut...",
+      "pilihan": ["Testing", "Finalisasi", "[Prototype]", "Marketing"]
+    },
+    {
+      "bab": "Mindset Wirausaha",
+      "pertanyaan": "Keyakinan bahwa bakat bisa dikembangkan dengan kerja keras disebut...",
+      "pilihan": ["Fixed Mindset", "[Growth Mindset]", "Closed Mindset", "Negative Mindset"]
+    },
+    {
+      "bab": "Mindset Wirausaha",
+      "pertanyaan": "Fenomena otak yang semakin kuat jika terus dilatih hal sulit disebut...",
+      "pilihan": ["[Neuroplastisitas]", "Neurotransmiter", "Neurosis", "Neurologi"]
+    },
+    {
+      "bab": "Mindset Wirausaha",
+      "pertanyaan": "Orang dengan Growth Mindset menganggap kegagalan sebagai...",
+      "pilihan": ["Akhir dari segalanya", "Tanda tidak berbakat", "[Peluang untuk belajar]", "Nasib buruk"]
+    },
+    {
+      "bab": "10D Bygrave",
+      "pertanyaan": "Karakter 'Dream' dalam 10D Bygrave artinya...",
+      "pilihan": ["[Mempunyai visi masa depan]", "Suka tidur", "Berkhayal tanpa aksi", "Mencari uang"]
+    },
+    {
+      "bab": "10D Bygrave",
+      "pertanyaan": "Kemampuan mengambil keputusan dengan cepat (Decisiveness) termasuk dalam...",
+      "pilihan": ["Karakter 5D", "Karakter 7D", "[Karakter 10D Bygrave]", "Karakter Marketing"]
+    },
+    {
+      "bab": "10D Bygrave",
+      "pertanyaan": "Karakter 'Doers' menekankan pada wirausaha yang...",
+      "pilihan": ["Hanya berteori", "[Langsung mempraktikkan ide]", "Menunggu bantuan", "Banyak mengeluh"]
+    },
+    {
+      "bab": "10D Bygrave",
+      "pertanyaan": "Kebulatan tekad dalam menghadapi rintangan disebut...",
+      "pilihan": ["Details", "[Determination]", "Dollars", "Distribute"]
+    },
+    {
+      "bab": "10D Bygrave",
+      "pertanyaan": "Karakter 'Devotion' berarti seorang wirausaha harus...",
+      "pilihan": ["[Mencintai pekerjaannya]", "Mencari untung besar saja", "Bekerja semaunya", "Pelit ilmu"]
+    },
+    {
+      "bab": "10D Bygrave",
+      "pertanyaan": "Kemauan membagi kepemilikan bisnis kepada orang kepercayaan disebut...",
+      "pilihan": ["Destiny", "Details", "[Distribute]", "Dedication"]
+    },
+    {
+      "bab": "10D Bygrave",
+      "pertanyaan": "Maksud dari 'Destiny' dalam 10D Bygrave adalah...",
+      "pilihan": ["[Bertanggung jawab atas nasib sendiri]", "Percaya keberuntungan saja", "Pasrah pada keadaan", "Mencari bantuan terus"]
+    },
+    {
+      "bab": "Kecerdasan Bisnis",
+      "pertanyaan": "Mengelola keluar masuknya uang (Cash Flow) membutuhkan kecerdasan...",
+      "pilihan": ["Emosional", "Sosial", "[Finansial]", "Spiritual"]
+    },
+    {
+      "bab": "Kecerdasan Bisnis",
+      "pertanyaan": "Kemampuan mengelola stres saat bisnis turun membutuhkan kecerdasan...",
+      "pilihan": ["Intelektual", "[Emosional]", "Matematika", "Bahasa"]
+    },
+    {
+      "bab": "Kepemimpinan",
+      "pertanyaan": "Kesesuaian antara perkataan dan perbuatan seorang pemimpin disebut...",
+      "pilihan": ["Otoritas", "[Integritas]", "Popularitas", "Loyalitas"]
+    },
+    {
+      "bab": "Kepemimpinan",
+      "pertanyaan": "Mengapa integritas sangat penting bagi wirausaha?",
+      "pilihan": ["Agar cepat kaya", "[Mendapatkan kepercayaan investor/karyawan]", "Agar ditakuti", "Agar bisa pamer"]
+    },
+    {
+      "bab": "Etika Bisnis",
+      "pertanyaan": "Pondasi utama agar bisnis stabil di tengah persaingan ketat adalah...",
+      "pilihan": ["Curang pada lawan", "Menurunkan harga", "[Memiliki etika dan visi jelas]", "Mengurangi kualitas"]
+    },
+    {
+      "bab": "Konsep Bisnis",
+      "pertanyaan": "Brainstorming paling efektif digunakan pada tahap...",
+      "pilihan": ["Produksi", "[Ideasi]", "Packing", "Evaluasi"]
+    },
+    {
+      "bab": "10D Bygrave",
+      "pertanyaan": "Uang bukan tujuan utama tapi sebagai ukuran kesuksesan, disebut...",
+      "pilihan": ["Dream", "Doers", "[Dollars]", "Destiny"]
+    },
+    {
+      "bab": "Ideasi Bisnis",
+      "pertanyaan": "Reverse dalam SCAMPER artinya...",
+      "pilihan": ["Meniru", "Mengganti", "[Membalik urutan/pola]", "Menghapus"]
+    },
+    {
+      "bab": "Mindset",
+      "pertanyaan": "Fixed Mindset percaya bahwa bakat adalah...",
+      "pilihan": ["Bisa diubah", "[Bawaan lahir dan permanen]", "Hasil latihan", "Sesuatu yang fleksibel"]
+    },
+    {
+      "bab": "Karakteristik",
+      "pertanyaan": "Memperhatikan hal-hal kecil yang detail dalam bisnis disebut...",
+      "pilihan": ["Dream", "[Details]", "Dedication", "Devotion"]
+    },
+    {
+      "bab": "Ideasi",
+      "pertanyaan": "Metode SCAMPER 'A' singkatan dari Adapt, yang berarti...",
+      "pilihan": ["Menghapus", "[Menyesuaikan dengan hal lain]", "Mengganti bahan", "Memperkecil"]
+    },
+    {
+      "bab": "Konsep PKK",
+      "pertanyaan": "Wirausaha yang sukses biasanya memiliki kepemimpinan yang...",
+      "pilihan": ["Egois", "Pemarah", "[Visioner dan Beretika]", "Tertutup"]
+    },
+    {
+      "bab": "Design Thinking",
+      "pertanyaan": "Menentukan inti masalah dari hasil riset empati disebut...",
+      "pilihan": ["[Define]", "Ideate", "Prototype", "Test"]
+    },
+    {
+      "bab": "Design Thinking",
+      "pertanyaan": "Tujuan dari tahap 'Test' adalah...",
+      "pilihan": ["Mencari keuntungan", "[Mendapatkan feedback dari pengguna]", "Menghias produk", "Menentukan harga"]
+    },
+    {
+      "bab": "Kecerdasan",
+      "pertanyaan": "Keseimbangan IQ dan EQ dalam bisnis berguna untuk...",
+      "pilihan": ["Bekerja sendirian", "Menghindari pajak", "[Mengambil keputusan yang tepat]", "Menghapus persaingan"]
+    },
+    {
+      "bab": "10D Bygrave",
+      "pertanyaan": "Fokus pada pekerjaan dan tidak mudah menyerah disebut...",
+      "pilihan": ["[Dedication]", "Dollars", "Distribute", "Dream"]
+    },
+    {
+      "bab": "Inovasi",
+      "pertanyaan": "Inovasi produk bertujuan untuk...",
+      "pilihan": ["Membosankan konsumen", "[Menambah nilai guna dan daya tarik]", "Menghabiskan modal", "Menambah beban kerja"]
+    },
+    {
+      "bab": "Etika",
+      "pertanyaan": "Menjaga kualitas produk meskipun harga bahan naik termasuk...",
+      "pilihan": ["Kesalahan bisnis", "Strategi merugi", "[Etika dan Integritas]", "Hobi"]
+    },
+    {
+      "bab": "Kreativitas",
+      "pertanyaan": "Divergent Thinking sering disebut dengan istilah...",
+      "pilihan": ["Berpikir kaku", "[Berpikir melebar]", "Berpikir fokus", "Berpikir logis"]
+    },
+    {
+      "bab": "Mindset",
+      "pertanyaan": "Salah satu ciri Growth Mindset adalah...",
+      "pilihan": ["Menghindari kritik", "[Belajar dari kritik]", "Malu bertanya", "Cepat puas"]
+    },
+    {
+      "bab": "Mindset",
+      "pertanyaan": "Menurut Carol Dweck, otak akan berkembang jika kita...",
+      "pilihan": ["Hanya tidur", "[Menghadapi tantangan sulit]", "Bekerja yang mudah saja", "Diam saja"]
+    },
+    {
+      "bab": "SCAMPER",
+      "pertanyaan": "M dalam SCAMPER adalah Modify, yang bisa berarti...",
+      "pilihan": ["[Mengubah atau memperbesar fitur]", "Menghapus produk", "Meniru lawan", "Mencatat harga"]
+    },
+    {
+      "bab": "PKK",
+      "pertanyaan": "Apa itu Cash Flow?",
+      "pilihan": ["Tabungan pribadi", "[Aliran keluar masuk uang usaha]", "Hutang bank", "Modal awal saja"]
+    },
+    {
+      "bab": "Bygrave",
+      "pertanyaan": "Seorang wirausaha yang bekerja 12 jam sehari menunjukkan karakter...",
+      "pilihan": ["Dream", "[Dedication]", "Distribute", "Dollars"]
+    },
+    {
+      "bab": "Bygrave",
+      "pertanyaan": "Cepat tanggap dalam melihat peluang bisnis adalah...",
+      "pilihan": ["Slow response", "Thinking", "[Decisiveness]", "Sleeping"]
+    },
+    {
+      "bab": "Design Thinking",
+      "pertanyaan": "Ideate adalah tahap untuk...",
+      "pilihan": ["Menjual barang", "[Menghasilkan banyak ide solusi]", "Mencari investor", "Membuat kemasan"]
+    },
+    {
+      "bab": "Kreativitas",
+      "pertanyaan": "Salah satu ciri orang kreatif adalah...",
+      "pilihan": ["Suka meniru", "Mudah menyerah", "[Memiliki rasa ingin tahu tinggi]", "Benci perubahan"]
+    },
+    {
+      "bab": "Bisnis",
+      "pertanyaan": "Apa yang dimaksud Stress Management?",
+      "pilihan": ["Menambah beban pikiran", "[Mengelola tekanan agar tetap produktif]", "Menghindari pekerjaan", "Melampiaskan emosi"]
+    },
+    {
+      "bab": "Inovasi",
+      "pertanyaan": "Inovasi yang menggabungkan dua produk menjadi satu disebut...",
+      "pilihan": ["Substitute", "[Combine]", "Eliminate", "Reverse"]
+    },
+    {
+      "bab": "Pemimpin",
+      "pertanyaan": "Seorang pemimpin yang baik harus bisa...",
+      "pilihan": ["Memerintah saja", "[Memberi contoh dan motivasi]", "Datang paling telat", "Mengambil semua untung"]
+    },
+    {
+      "bab": "Final",
+      "pertanyaan": "Tujuan akhir dari mata pelajaran PKK adalah agar siswa memiliki...",
+      "pilihan": ["Banyak uang instan", "[Jiwa wirausaha dan kemandirian]", "Gelar sarjana", "Banyak pengikut IG"]
+    }
+  ]
+}
