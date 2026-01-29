@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Orbitron', 'Segoe UI', sans-serif; /* Font Tech */
+    font-family: 'Orbitron', 'Segoe UI', sans-serif; 
 }
 
 body {
@@ -11,15 +11,15 @@ body {
     color: #ffffff;
     min-height: 100vh;
     width: 100vw;
-    /* PENTING: Membuat konten selalu di tengah layar (Horizontal & Vertikal) */
     display: flex;
     justify-content: center;
     align-items: center;
     overflow-x: hidden;
     background: radial-gradient(circle, #0a0b16 0%, #05060a 100%);
+    transition: box-shadow 0.3s ease; /* Untuk efek flash saat kuis */
 }
 
-/* [02] - Kontainer Utama (Responsif) */
+/* [02] - Kontainer Utama */
 section {
     display: none;
     width: 100%;
@@ -33,10 +33,9 @@ section.active-section {
     display: flex;
 }
 
-/* Kotak Konten yang akan nampil di Infokus */
-.login-box, .materi-centered-box, .centered-wrapper {
+.login-box, .materi-centered-box, .centered-wrapper, .public-box {
     width: 90%; 
-    max-width: 1000px; /* Batas lebar di laptop agar simetris */
+    max-width: 1000px;
     background: rgba(15, 17, 26, 0.95);
     border: 2px solid #00f2ff;
     border-radius: 15px;
@@ -46,20 +45,28 @@ section.active-section {
     backdrop-filter: blur(10px);
 }
 
-/* [03] - Efek Glitch & Teks */
+/* [03] - Efek Glitch */
 .glitch {
     font-size: clamp(1.5rem, 5vw, 2.5rem);
     color: #00f2ff;
     text-transform: uppercase;
     letter-spacing: 3px;
     margin-bottom: 20px;
-    text-shadow: 2px 2px #ff0055;
+    position: relative;
+    text-shadow: 0.05em 0 0 rgba(255, 0, 85, 0.75),
+                -0.025em -0.05em 0 rgba(0, 242, 255, 0.75);
+    animation: glitch-anim 500ms infinite;
 }
 
-/* [04] - Team Grid (Otomatis Berubah) */
+@keyframes glitch-anim {
+    0% { text-shadow: 2px 2px #ff0055; }
+    50% { text-shadow: -2px -2px #00f2ff; }
+    100% { text-shadow: 2px -2px #ff0055; }
+}
+
+/* [04] - Team Grid */
 .team-grid {
     display: grid;
-    /* Di HP jadi 2-3 kolom, di Laptop otomatis sebaris/6 kolom */
     grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
     gap: 15px;
     margin: 30px 0;
@@ -83,16 +90,29 @@ section.active-section {
     margin-bottom: 10px;
 }
 
-/* [05] - Area Materi (Scrollable agar tidak tumpah) */
+/* [05] - Area Materi (Dukungan 2 Paragraf) */
 .text-main {
     font-size: clamp(1rem, 2.5vw, 1.2rem);
-    line-height: 1.6;
+    line-height: 1.8;
     text-align: justify;
     color: #d1d1d1;
-    max-height: 40vh; /* Batasi tinggi teks materi */
-    overflow-y: auto; /* Munculkan scroll internal */
+    max-height: 45vh; 
+    overflow-y: auto;
     padding-right: 15px;
     margin: 20px 0;
+}
+
+/* Style khusus paragraf agar terpisah rapi */
+.text-main p {
+    margin-bottom: 20px;
+    border-left: 3px solid rgba(0, 242, 255, 0.2);
+    padding-left: 15px;
+    transition: 0.3s;
+}
+
+.text-main p:hover {
+    border-left: 3px solid #00f2ff;
+    color: #fff;
 }
 
 /* Custom Scrollbar */
@@ -111,9 +131,9 @@ section.active-section {
 }
 
 /* [07] - Navigasi & Tombol */
-.materi-controls, .input-group {
+.materi-controls, .input-group, .action-buttons {
     display: flex;
-    flex-wrap: wrap; /* Supaya tombol gak tumpah di HP */
+    flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
     margin-top: 20px;
@@ -142,25 +162,6 @@ button:hover {
     clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
 }
 
-.btn-danger {
-    border-color: #ff0055;
-    color: #ff0055;
-    animation: pulse 1.5s infinite;
-}
-
-/* [08] - Animasi & Media Queries */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes pulse {
-    0% { box-shadow: 0 0 0 0 rgba(255, 0, 85, 0.4); }
-    70% { box-shadow: 0 0 0 15px rgba(255, 0, 85, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(255, 0, 85, 0); }
-}
-
-/* Loading Bar */
 .loading-bar {
     width: 100%;
     height: 4px;
@@ -175,64 +176,67 @@ button:hover {
     transition: width 2s linear;
 }
 
-/* Penyesuaian khusus untuk layar sangat kecil */
-@media (max-width: 480px) {
-    .login-box, .materi-centered-box { padding: 20px 15px; }
-    .team-grid { grid-template-columns: repeat(2, 1fr); }
-}
-
+/* Tombol Bahaya / Kuis Salah */
 .btn-danger {
     background: #ff0055;
     color: #fff;
     border: none;
     padding: 12px 25px;
     font-weight: bold;
-    cursor: pointer;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(255, 0, 85, 0.4);
-    transition: 0.3s;
+    animation: pulse 1.5s infinite;
 }
 
-.btn-danger:hover {
-    background: #ff4d88;
-    box-shadow: 0 0 20px #ff0055;
-    transform: scale(1.05);
+/* Kuis Option Button */
+.option-btn {
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: left;
+    border: 1px solid rgba(0, 242, 255, 0.4);
 }
 
-.btn-back {
-    background: #333;
-    color: #00f2ff;
-    border: 1px solid #00f2ff;
-    padding: 12px 25px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-/* Perbaikan Kontainer Leaderboard agar Lebar dan Bisa Scroll */
+/* [08] - Leaderboard Table */
 .leaderboard-table-container {
     width: 100%;
-    overflow-x: auto; /* Scroll horizontal jika layar sangat kecil */
-    max-height: 400px; /* Batasi tinggi agar tidak tumpah */
-    overflow-y: auto; /* Scroll vertikal jika banyak kelompok */
+    overflow-x: auto;
+    max-height: 400px;
+    overflow-y: auto;
     margin: 20px 0;
-    padding: 0 10px;
 }
 
-/* Memastikan tabel mengambil seluruh lebar kotak */
 .leaderboard-table {
     width: 100%;
     border-collapse: separate;
-    border-spacing: 0 10px; /* Memberi jarak antar baris agar tidak dempet */
+    border-spacing: 0 10px;
     text-align: center;
 }
 
-.leaderboard-table th, .leaderboard-table td {
-    padding: 15px 10px; /* Memberi ruang di dalam sel */
-    white-space: nowrap; /* Mencegah teks turun ke bawah/patah baris */
+.leaderboard-table th {
+    color: #00f2ff;
+    border-bottom: 2px solid #00f2ff;
+    padding: 10px;
 }
 
-/* Membuat Kotak Wrapper Lebih Lebar */
-.centered-wrapper {
-    width: 95%; /* Mengambil 95% lebar layar agar lega di samping */
-    max-width: 1100px; /* Tapi tetap ada batas maksimal di laptop */
+.leaderboard-table td {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 15px;
 }
+
+/* [09] - Animasi */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(255, 0, 85, 0.4); }
+    70% { box-shadow: 0 0 0 15px rgba(255, 0, 85, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 0, 85, 0); }
+}
+
+/* Media Queries */
+@media (max-width: 480px) {
+    .team-grid { grid-template-columns: repeat(2, 1fr); }
+    .glitch { font-size: 1.5rem; }
+    }
+    
